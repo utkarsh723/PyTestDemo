@@ -8,6 +8,7 @@ import allure
 import os, subprocess
 
 
+# addopts = --alluredir=allure-results
 @pytest.fixture(params=["chrome"], scope='class')
 def init_driver(request):
     if request.param == "chrome":
@@ -23,10 +24,11 @@ def init_driver(request):
 @pytest.hookimpl(tryfirst=True)
 def pytest_exception_interact(node, call ,report):
     if report.failed:
-        allure.attach(node.nodeid,node.instance.driver.get_screenshot_as_png(), "Attachment", AttachmentType.PNG)
+        allure.attach(node.instance.driver.get_screenshot_as_png(), "Attachment", AttachmentType.PNG)
 
 
 # Run allure report generation
-def pytest_sessionfinish(session):
-    # os.system('allure serve allure-reports')
-    os.system('allure generate allure-reports/json -o allure-reports/html --clean')
+# def pytest_sessionfinish(session):
+#     # os.system('allure serve allure-reports')
+#     os.system('allure generate allure-reports/json -o allure-reports/html --clean')
+#     # os.system('allure generate allure-results Reports --clean')
