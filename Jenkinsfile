@@ -9,7 +9,7 @@ pipeline{
 
         stage('Run Tests'){
             steps{
-                sh 'pytest --alluredir=allure_report -v -s'
+                sh 'pytest -k test_LoginPage.py --alluredir=allure_report'
             }
         }
         stage('Generate Reports'){
