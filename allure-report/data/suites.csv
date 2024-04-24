@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Sun Apr 21 16:03:45 IST 2024","Sun Apr 21 16:03:56 IST 2024","10994","Tests","test_LoginPage","Test_Login","","","test_login_page_title[chrome]",""
+"passed","Sun Apr 21 16:03:41 IST 2024","Sun Apr 21 16:03:45 IST 2024","3679","Tests","test_LoginPage","Test_Login","","","test_Signup_link_visible[chrome]",""
+"passed","Sun Apr 21 16:03:57 IST 2024","Sun Apr 21 16:04:03 IST 2024","6773","Tests","test_LoginPage","Test_Login","","","test_login[chrome]",""
